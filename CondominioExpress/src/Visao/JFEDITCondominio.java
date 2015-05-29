@@ -12,21 +12,14 @@ import javax.swing.JOptionPane;
  *
  * @author Tarcísio
  */
-public class JFCADCondominio extends javax.swing.JInternalFrame {
+public class JFEDITCondominio extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form JFCADCondominio
      */
-    public JFCADCondominio() {
+    public JFEDITCondominio() {
         initComponents();
         jnome.requestFocus();//seta o campo nome
-    jCheckBox1.setSelected(true);
-    jendereco.setEnabled(false);
-           jcep.setEnabled(false);
-           jbairro.setEnabled(false);
-           jcidade.setEnabled(false);
-           jestado.setEnabled(false);
-           jButtonpesquisar.setEnabled(isIcon);
     }
 
     /**
@@ -52,7 +45,7 @@ public class JFCADCondominio extends javax.swing.JInternalFrame {
         jendereco = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jcep = new javax.swing.JFormattedTextField();
-        jButtonpesquisar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jbairro = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -150,12 +143,12 @@ public class JFCADCondominio extends javax.swing.JInternalFrame {
             }
         });
 
-        jButtonpesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones botoes/lupa.png"))); // NOI18N
-        jButtonpesquisar.setActionCommand("...");
-        jButtonpesquisar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButtonpesquisar.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones botoes/lupa.png"))); // NOI18N
+        jButton1.setActionCommand("...");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonpesquisarActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -201,17 +194,12 @@ public class JFCADCondominio extends javax.swing.JInternalFrame {
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones menu/condomino.png"))); // NOI18N
-        jLabel4.setText("Cadastro de Condôminos");
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones menu/editar.png"))); // NOI18N
+        jLabel4.setText("Editar Condôminos");
 
         jCheckBox1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jCheckBox1.setText("Local");
         jCheckBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
-            }
-        });
 
         jButtonalterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones botoes/limpar.png"))); // NOI18N
         jButtonalterar.setToolTipText("Limpar");
@@ -294,7 +282,7 @@ public class JFCADCondominio extends javax.swing.JInternalFrame {
                                                 .addGroup(layout.createSequentialGroup()
                                                     .addComponent(jcep, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(jButtonpesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                             .addGap(29, 29, 29)
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addComponent(jLabel15)
@@ -374,7 +362,7 @@ public class JFCADCondominio extends javax.swing.JInternalFrame {
                                 .addComponent(jLabel11)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButtonpesquisar)
+                                    .addComponent(jButton1)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jcep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -414,10 +402,10 @@ public class JFCADCondominio extends javax.swing.JInternalFrame {
 
     }//GEN-LAST:event_jcepActionPerformed
 
-    private void jButtonpesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonpesquisarActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         buscaCep() ;
 
-    }//GEN-LAST:event_jButtonpesquisarActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jbairroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbairroActionPerformed
         // TODO add your handling code here:
@@ -452,28 +440,10 @@ public class JFCADCondominio extends javax.swing.JInternalFrame {
         jCheckBox1.setSelected(false); 
     }//GEN-LAST:event_jButtonalterarActionPerformed
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-       if (jCheckBox1.isSelected()){
-           jendereco.setEnabled(false);
-           jcep.setEnabled(false);
-           jbairro.setEnabled(false);
-           jcidade.setEnabled(false);
-           jestado.setEnabled(false);
-           jButtonpesquisar.setEnabled(isIcon);
-      }else{
-           jendereco.setEnabled(true);
-           jcep.setEnabled(true);
-           jbairro.setEnabled(true);
-           jcidade.setEnabled(true);
-           jestado.setEnabled(true);
-            jButtonpesquisar.setEnabled( true);
-       }
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonalterar;
-    private javax.swing.JButton jButtonpesquisar;
     private javax.swing.JButton jButtonsalvar;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel10;

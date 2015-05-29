@@ -7,6 +7,7 @@ package Visao;
 
 
 import java.awt.Dimension;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -55,10 +56,20 @@ public class JFCONCondomino extends javax.swing.JInternalFrame {
         jButtonalterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones botoes/Editar.png"))); // NOI18N
         jButtonalterar.setToolTipText("Alterar");
         jButtonalterar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtonalterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonalterarActionPerformed(evt);
+            }
+        });
 
         jButtondeletar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones botoes/Delete.png"))); // NOI18N
         jButtondeletar.setToolTipText("Excluir");
         jButtondeletar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtondeletar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtondeletarActionPerformed(evt);
+            }
+        });
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -135,7 +146,27 @@ JFCADCondo .setVisible(true);
 JFCADCondo .setPosicao(); 
     }//GEN-LAST:event_jButtonaddActionPerformed
 
+    private void jButtonalterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonalterarActionPerformed
+        JFEDITCondominio JFEDITCondo = new   JFEDITCondominio ();
+ JFMenu.jDesktop.add(JFEDITCondo);
+JFEDITCondo .setVisible(true);
+JFEDITCondo .setPosicao(); 
+    }//GEN-LAST:event_jButtonalterarActionPerformed
 
+    private void jButtondeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtondeletarActionPerformed
+int resposta = JOptionPane.showConfirmDialog(this, "Deseja realmente excluir cliente selecionado?", "Confirmação",  
+      JOptionPane.YES_NO_OPTION);  
+      if (resposta == JOptionPane.YES_OPTION){  
+        JOptionPane.showConfirmDialog(this, "Deseja realmente excluir condomíno selecionado?", "Confirmação",  
+JOptionPane.YES_NO_OPTION);    
+JOptionPane.showMessageDialog(this, "condomíno excluido com sucesso!"); 
+}else{  
+          JOptionPane.showMessageDialog(this, "Selecione um condomíno para exclusão");  
+   
+        
+    }//GEN-LAST:event_jButtondeletarActionPerformed
+
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonadd;

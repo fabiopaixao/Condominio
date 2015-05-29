@@ -5,6 +5,8 @@
  */
 package Modelo;
 
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
 import java.util.Collection;
 import javax.persistence.Basic;
@@ -20,6 +22,7 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -36,6 +39,8 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Bloco.findByNome", query = "SELECT b FROM Bloco b WHERE b.nome = :nome"),
     @NamedQuery(name = "Bloco.findByQtdApartamento", query = "SELECT b FROM Bloco b WHERE b.qtdApartamento = :qtdApartamento")})
 public class Bloco implements Serializable {
+    @Transient
+    private PropertyChangeSupport changeSupport = new PropertyChangeSupport(this);
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -66,7 +71,9 @@ public class Bloco implements Serializable {
     }
 
     public void setIdBloco(Integer idBloco) {
+        Integer oldIdBloco = this.idBloco;
         this.idBloco = idBloco;
+        changeSupport.firePropertyChange("idBloco", oldIdBloco, idBloco);
     }
 
     public String getNome() {
@@ -74,7 +81,9 @@ public class Bloco implements Serializable {
     }
 
     public void setNome(String nome) {
+        String oldNome = this.nome;
         this.nome = nome;
+        changeSupport.firePropertyChange("nome", oldNome, nome);
     }
 
     public Integer getQtdApartamento() {
@@ -82,7 +91,9 @@ public class Bloco implements Serializable {
     }
 
     public void setQtdApartamento(Integer qtdApartamento) {
+        Integer oldQtdApartamento = this.qtdApartamento;
         this.qtdApartamento = qtdApartamento;
+        changeSupport.firePropertyChange("qtdApartamento", oldQtdApartamento, qtdApartamento);
     }
 
     @XmlTransient
@@ -108,7 +119,9 @@ public class Bloco implements Serializable {
     }
 
     public void setCondominioidCondominio(Condominio condominioidCondominio) {
+        Condominio oldCondominioidCondominio = this.condominioidCondominio;
         this.condominioidCondominio = condominioidCondominio;
+        changeSupport.firePropertyChange("condominioidCondominio", oldCondominioidCondominio, condominioidCondominio);
     }
 
     @Override
@@ -134,6 +147,14 @@ public class Bloco implements Serializable {
     @Override
     public String toString() {
         return "Modelo.Bloco[ idBloco=" + idBloco + " ]";
+    }
+
+    public void addPropertyChangeListener(PropertyChangeListener listener) {
+        changeSupport.addPropertyChangeListener(listener);
+    }
+
+    public void removePropertyChangeListener(PropertyChangeListener listener) {
+        changeSupport.removePropertyChangeListener(listener);
     }
     
 }
