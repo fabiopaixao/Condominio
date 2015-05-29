@@ -5,7 +5,7 @@
  */
 package Visao;
 
-import static Visao.JFMenu.jDesktop;
+
 import java.awt.Dimension;
 
 /**
@@ -33,7 +33,6 @@ public class JFCONCondomino extends javax.swing.JInternalFrame {
         jButtonadd = new javax.swing.JButton();
         jButtonalterar = new javax.swing.JButton();
         jButtondeletar = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jnome = new javax.swing.JTextField();
@@ -42,7 +41,7 @@ public class JFCONCondomino extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setTitle("Condomínio Express  |  Consulta Codomínos");
-        setPreferredSize(new java.awt.Dimension(667, 413));
+        setPreferredSize(new java.awt.Dimension(553, 530));
 
         jButtonadd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones botoes/adicionar.png"))); // NOI18N
         jButtonadd.setToolTipText("Novo");
@@ -60,8 +59,6 @@ public class JFCONCondomino extends javax.swing.JInternalFrame {
         jButtondeletar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones botoes/Delete.png"))); // NOI18N
         jButtondeletar.setToolTipText("Excluir");
         jButtondeletar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones painel/telaconcondominio.png"))); // NOI18N
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -90,52 +87,50 @@ public class JFCONCondomino extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 539, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jnome)
-                        .addGap(24, 24, 24)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton1))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 485, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jButtonadd)
                                 .addGap(18, 18, 18)
                                 .addComponent(jButtonalterar)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButtondeletar)))
+                                .addComponent(jButtondeletar))
+                            .addComponent(jLabel2))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jnome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButtonadd)
                     .addComponent(jButtonalterar)
                     .addComponent(jButtondeletar))
-                .addGap(26, 26, 26))
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(22, 22, 22))
         );
 
-        setBounds(0, 0, 667, 413);
+        setBounds(0, 0, 553, 530);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonaddActionPerformed
  JFCADCondominio JFCADCondo = new  JFCADCondominio ();
-JFMenu.jDesktop.add(JFCADCondo);
+ JFMenu.jDesktop.add(JFCADCondo);
 JFCADCondo .setVisible(true);
 JFCADCondo .setPosicao(); 
     }//GEN-LAST:event_jButtonaddActionPerformed
@@ -147,7 +142,6 @@ JFCADCondo .setPosicao();
     private javax.swing.JButton jButtonalterar;
     private javax.swing.JButton jButtondeletar;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jnome;

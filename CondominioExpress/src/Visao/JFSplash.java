@@ -89,9 +89,9 @@ JFSplash.this.dispose();
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 15)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(169, 174, 45));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(10, 160, 337, 33);
+        jLabel1.setBounds(10, 10, 337, 33);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones telas/Tela_Splash.png"))); // NOI18N
         getContentPane().add(jLabel2);

@@ -67,17 +67,12 @@ ie.printStackTrace();
         jMenuCadastro = new javax.swing.JMenu();
         jMenuItemCondomino = new javax.swing.JMenuItem();
         jMenuItemApartamentos = new javax.swing.JMenuItem();
+        jMenuItemBloco = new javax.swing.JMenuItem();
         jMenuItemVeiculos = new javax.swing.JMenuItem();
         jMenuItemPrestadorServicos = new javax.swing.JMenuItem();
         jMenuItemVisitantes = new javax.swing.JMenuItem();
         jMenuItemFuncionarios = new javax.swing.JMenuItem();
         jMenuItemUsuarios = new javax.swing.JMenuItem();
-        jMenuPortaria = new javax.swing.JMenu();
-        jMenuItemOcorrencia = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuRelatorio = new javax.swing.JMenu();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
         jMenuAjuda = new javax.swing.JMenu();
         jMenuItemSobre = new javax.swing.JMenuItem();
         jMenuSair = new javax.swing.JMenu();
@@ -170,6 +165,12 @@ ie.printStackTrace();
         });
         jMenuCadastro.add(jMenuItemApartamentos);
 
+        jMenuItemBloco.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jMenuItemBloco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones menu/bloco.png"))); // NOI18N
+        jMenuItemBloco.setText("Bloco");
+        jMenuItemBloco.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuCadastro.add(jMenuItemBloco);
+
         jMenuItemVeiculos.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jMenuItemVeiculos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones menu/veiculo.png"))); // NOI18N
         jMenuItemVeiculos.setText("Veículo");
@@ -226,54 +227,8 @@ ie.printStackTrace();
         jMenuCadastro.add(jMenuItemUsuarios);
 
         jMenuBar1.add(jMenuCadastro);
-        jMenuCadastro.getAccessibleContext().setAccessibleName("Menu   ");
 
-        jMenuPortaria.setText("Portaria   ");
-        jMenuPortaria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuPortaria.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-
-        jMenuItemOcorrencia.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jMenuItemOcorrencia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones menu/ocorrencias.png"))); // NOI18N
-        jMenuItemOcorrencia.setText("Ocorrência");
-        jMenuItemOcorrencia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItemOcorrencia.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemOcorrenciaActionPerformed(evt);
-            }
-        });
-        jMenuPortaria.add(jMenuItemOcorrencia);
-
-        jMenuItem2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones menu/entradasaida.png"))); // NOI18N
-        jMenuItem2.setText("Entrada Visitante");
-        jMenuItem2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
-        jMenuPortaria.add(jMenuItem2);
-
-        jMenuBar1.add(jMenuPortaria);
-
-        jMenuRelatorio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuRelatorio.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jMenuRelatorio.setLabel("Relatórios   ");
-
-        jMenuItem5.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones menu/Relatoriousuario.png"))); // NOI18N
-        jMenuItem5.setText("Condôminos");
-        jMenuItem5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuRelatorio.add(jMenuItem5);
-
-        jMenuItem6.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones menu/relatorio-1.png"))); // NOI18N
-        jMenuItem6.setText("Apartamentos");
-        jMenuItem6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuRelatorio.add(jMenuItem6);
-
-        jMenuBar1.add(jMenuRelatorio);
-
+        jMenuAjuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones menu/infomenu.png"))); // NOI18N
         jMenuAjuda.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenuAjuda.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jMenuAjuda.setLabel("Ajuda   ");
@@ -291,6 +246,7 @@ ie.printStackTrace();
 
         jMenuBar1.add(jMenuAjuda);
 
+        jMenuSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones menu/sairrmenu.png"))); // NOI18N
         jMenuSair.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenuSair.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jMenuSair.setLabel("Sair   ");
@@ -348,10 +304,10 @@ ie.printStackTrace();
     }//GEN-LAST:event_jMenuCadastroActionPerformed
 
     private void jMenuItemCondominoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCondominoActionPerformed
-       JFCADCondominio JFCADCondo = new   JFCADCondominio();
-        jDesktop.add(JFCADCondo);
-         JFCADCondo.setVisible(true);
-         JFCADCondo.setPosicao(); 
+     JFCONCondomino CONCondominio = new JFCONCondomino();
+       jDesktop.add(CONCondominio);
+     CONCondominio.setVisible(true);
+        CONCondominio.setPosicao(); 
     }//GEN-LAST:event_jMenuItemCondominoActionPerformed
 
     private void jMenuItemApartamentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemApartamentosActionPerformed
@@ -402,20 +358,6 @@ ie.printStackTrace();
     cadusuarios.setVisible(true);
     cadusuarios.setPosicao();
     }//GEN-LAST:event_jMenuItemUsuariosActionPerformed
-
-    private void jMenuItemOcorrenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemOcorrenciaActionPerformed
-   JFCADocorrencia cadocorrencias = new   JFCADocorrencia();
-   jDesktop.add(cadocorrencias);
-   cadocorrencias.setVisible(true);
-   cadocorrencias.setPosicao();
-    }//GEN-LAST:event_jMenuItemOcorrenciaActionPerformed
-
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-   JFCADentrada cadentrada = new   JFCADentrada();
-   jDesktop.add(cadentrada);
-   cadentrada.setVisible(true);
-   cadentrada.setPosicao();
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -469,27 +411,22 @@ jHora.setText("Hora: "+hora+":"+minuto+":"+segundo);
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel fundo;
     private javax.swing.JLabel jData;
-    private javax.swing.JDesktopPane jDesktop;
+    public static javax.swing.JDesktopPane jDesktop;
     private javax.swing.JLabel jHora;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenuAjuda;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuCadastro;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItemApartamentos;
+    private javax.swing.JMenuItem jMenuItemBloco;
     private javax.swing.JMenuItem jMenuItemCondomino;
     private javax.swing.JMenuItem jMenuItemFuncionarios;
-    private javax.swing.JMenuItem jMenuItemOcorrencia;
     private javax.swing.JMenuItem jMenuItemPrestadorServicos;
     private javax.swing.JMenuItem jMenuItemSobre;
     private javax.swing.JMenuItem jMenuItemUsuarios;
     private javax.swing.JMenuItem jMenuItemVeiculos;
     private javax.swing.JMenuItem jMenuItemVisitantes;
-    private javax.swing.JMenu jMenuPortaria;
-    private javax.swing.JMenu jMenuRelatorio;
     private javax.swing.JMenu jMenuSair;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

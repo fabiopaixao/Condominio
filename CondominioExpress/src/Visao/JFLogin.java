@@ -42,16 +42,16 @@ public class JFLogin extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(169, 172, 44));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Digite a sua senha:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(350, 140, 150, 19);
+        jLabel2.setBounds(370, 150, 150, 19);
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(169, 172, 44));
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Digite o seu usuário:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(350, 70, 150, 19);
+        jLabel3.setBounds(370, 80, 150, 19);
 
         login.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         login.addActionListener(new java.awt.event.ActionListener() {
@@ -60,11 +60,11 @@ public class JFLogin extends javax.swing.JFrame {
             }
         });
         getContentPane().add(login);
-        login.setBounds(350, 100, 200, 28);
+        login.setBounds(370, 110, 200, 28);
 
         senha.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         getContentPane().add(senha);
-        senha.setBounds(350, 170, 200, 28);
+        senha.setBounds(370, 180, 200, 28);
 
         jButtonacessar.setBackground(new java.awt.Color(255, 255, 255));
         jButtonacessar.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
@@ -80,7 +80,7 @@ public class JFLogin extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonacessar);
-        jButtonacessar.setBounds(350, 220, 90, 30);
+        jButtonacessar.setBounds(370, 230, 90, 30);
 
         jButtonsair.setBackground(new java.awt.Color(255, 255, 255));
         jButtonsair.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
@@ -97,9 +97,9 @@ public class JFLogin extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonsair);
-        jButtonsair.setBounds(460, 220, 90, 30);
+        jButtonsair.setBounds(480, 230, 90, 30);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones telas/tela_login.fw.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones telas/tela_login.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 620, 320);
 
