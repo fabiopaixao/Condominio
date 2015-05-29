@@ -154,11 +154,11 @@ JFEDITCondo .setPosicao();
     }//GEN-LAST:event_jButtonalterarActionPerformed
 
     private void jButtondeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtondeletarActionPerformed
-int resposta = JOptionPane.showConfirmDialog(this, "Deseja realmente excluir cliente selecionado?", "Confirmação",  
+int resposta = JOptionPane.showConfirmDialog(this, "Deseja realmente excluir condomíno selecionado?", "Confirmação",  
       JOptionPane.YES_NO_OPTION);  
       if (resposta == JOptionPane.YES_OPTION){  
-        JOptionPane.showConfirmDialog(this, "Deseja realmente excluir condomíno selecionado?", "Confirmação",  
-JOptionPane.YES_NO_OPTION);    
+    
+ 
 JOptionPane.showMessageDialog(this, "condomíno excluido com sucesso!"); 
 }else{  
           JOptionPane.showMessageDialog(this, "Selecione um condomíno para exclusão");  

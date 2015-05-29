@@ -45,7 +45,7 @@ public class JFEDITCondominio extends javax.swing.JInternalFrame {
         jendereco = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jcep = new javax.swing.JFormattedTextField();
-        jButton1 = new javax.swing.JButton();
+        jButtonpesquisar = new javax.swing.JButton();
         jbairro = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -59,7 +59,6 @@ public class JFEDITCondominio extends javax.swing.JInternalFrame {
         jButtonsalvar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
-        jButtonalterar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jobservacoes = new javax.swing.JTextPane();
         jLabel6 = new javax.swing.JLabel();
@@ -143,12 +142,12 @@ public class JFEDITCondominio extends javax.swing.JInternalFrame {
             }
         });
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones botoes/lupa.png"))); // NOI18N
-        jButton1.setActionCommand("...");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonpesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones botoes/lupa.png"))); // NOI18N
+        jButtonpesquisar.setActionCommand("...");
+        jButtonpesquisar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtonpesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonpesquisarActionPerformed(evt);
             }
         });
 
@@ -200,13 +199,9 @@ public class JFEDITCondominio extends javax.swing.JInternalFrame {
         jCheckBox1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jCheckBox1.setText("Local");
         jCheckBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        jButtonalterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones botoes/limpar.png"))); // NOI18N
-        jButtonalterar.setToolTipText("Limpar");
-        jButtonalterar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButtonalterar.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonalterarActionPerformed(evt);
+                jCheckBox1ActionPerformed(evt);
             }
         });
 
@@ -239,8 +234,6 @@ public class JFEDITCondominio extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButtonsalvar)
-                        .addGap(26, 26, 26)
-                        .addComponent(jButtonalterar)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel6)
@@ -282,7 +275,7 @@ public class JFEDITCondominio extends javax.swing.JInternalFrame {
                                                 .addGroup(layout.createSequentialGroup()
                                                     .addComponent(jcep, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                    .addComponent(jButtonpesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                             .addGap(29, 29, 29)
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addComponent(jLabel15)
@@ -362,7 +355,7 @@ public class JFEDITCondominio extends javax.swing.JInternalFrame {
                                 .addComponent(jLabel11)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton1)
+                                    .addComponent(jButtonpesquisar)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jcep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -376,9 +369,7 @@ public class JFEDITCondominio extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonsalvar)
-                    .addComponent(jButtonalterar))
+                .addComponent(jButtonsalvar)
                 .addContainerGap())
         );
 
@@ -402,10 +393,10 @@ public class JFEDITCondominio extends javax.swing.JInternalFrame {
 
     }//GEN-LAST:event_jcepActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButtonpesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonpesquisarActionPerformed
         buscaCep() ;
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButtonpesquisarActionPerformed
 
     private void jbairroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbairroActionPerformed
         // TODO add your handling code here:
@@ -423,27 +414,27 @@ public class JFEDITCondominio extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jRGActionPerformed
 
-    private void jButtonalterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonalterarActionPerformed
-        jnome.setText("");
-        jcpf.setText("");
-        jRG.setText("");
-        jcelular.setText("");
-        jtelefone.setText("");
-        jcep.setText("");
-        jcidade.setText("");
-        jbairro.setText("");
-        jendereco.setText("");
-        jemail.setText("");
-        japartamento.setText("");
-        jobservacoes.setText("");
-        jestado.setSelectedItem(null);
-        jCheckBox1.setSelected(false); 
-    }//GEN-LAST:event_jButtonalterarActionPerformed
-
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+       if (jCheckBox1.isSelected()){
+           jendereco.setEnabled(false);
+           jcep.setEnabled(false);
+           jbairro.setEnabled(false);
+           jcidade.setEnabled(false);
+           jestado.setEnabled(false);
+           jButtonpesquisar.setEnabled(isIcon);
+      }else{
+           jendereco.setEnabled(true);
+           jcep.setEnabled(true);
+           jbairro.setEnabled(true);
+           jcidade.setEnabled(true);
+           jestado.setEnabled(true);
+            jButtonpesquisar.setEnabled( true);
+       
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButtonalterar;
+    private javax.swing.JButton jButtonpesquisar;
     private javax.swing.JButton jButtonsalvar;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel10;

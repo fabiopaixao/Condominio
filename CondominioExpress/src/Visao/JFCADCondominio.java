@@ -18,15 +18,15 @@ public class JFCADCondominio extends javax.swing.JInternalFrame {
      * Creates new form JFCADCondominio
      */
     public JFCADCondominio() {
-        initComponents();
-        jnome.requestFocus();//seta o campo nome
+    initComponents();
+    jnome.requestFocus();//seta o campo nome
     jCheckBox1.setSelected(true);
     jendereco.setEnabled(false);
-           jcep.setEnabled(false);
-           jbairro.setEnabled(false);
-           jcidade.setEnabled(false);
-           jestado.setEnabled(false);
-           jButtonpesquisar.setEnabled(isIcon);
+    jcep.setEnabled(false);
+    jbairro.setEnabled(false);
+    jcidade.setEnabled(false);
+    jestado.setEnabled(false);
+    jButtonpesquisar.setEnabled(isIcon);
     }
 
     /**
@@ -66,7 +66,7 @@ public class JFCADCondominio extends javax.swing.JInternalFrame {
         jButtonsalvar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
-        jButtonalterar = new javax.swing.JButton();
+        jButtonlimpar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jobservacoes = new javax.swing.JTextPane();
         jLabel6 = new javax.swing.JLabel();
@@ -213,12 +213,12 @@ public class JFCADCondominio extends javax.swing.JInternalFrame {
             }
         });
 
-        jButtonalterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones botoes/limpar.png"))); // NOI18N
-        jButtonalterar.setToolTipText("Limpar");
-        jButtonalterar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButtonalterar.addActionListener(new java.awt.event.ActionListener() {
+        jButtonlimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones botoes/limpar.png"))); // NOI18N
+        jButtonlimpar.setToolTipText("Limpar");
+        jButtonlimpar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtonlimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonalterarActionPerformed(evt);
+                jButtonlimparActionPerformed(evt);
             }
         });
 
@@ -252,7 +252,7 @@ public class JFCADCondominio extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButtonsalvar)
                         .addGap(26, 26, 26)
-                        .addComponent(jButtonalterar)
+                        .addComponent(jButtonlimpar)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel6)
@@ -390,7 +390,7 @@ public class JFCADCondominio extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButtonsalvar)
-                    .addComponent(jButtonalterar))
+                    .addComponent(jButtonlimpar))
                 .addContainerGap())
         );
 
@@ -435,7 +435,7 @@ public class JFCADCondominio extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jRGActionPerformed
 
-    private void jButtonalterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonalterarActionPerformed
+    private void jButtonlimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonlimparActionPerformed
         jnome.setText("");
         jcpf.setText("");
         jRG.setText("");
@@ -449,8 +449,15 @@ public class JFCADCondominio extends javax.swing.JInternalFrame {
         japartamento.setText("");
         jobservacoes.setText("");
         jestado.setSelectedItem(null);
-        jCheckBox1.setSelected(false); 
-    }//GEN-LAST:event_jButtonalterarActionPerformed
+        jCheckBox1.setSelected(true); 
+        jendereco.setEnabled(false);
+        jcep.setEnabled(false);
+        jbairro.setEnabled(false);
+        jcidade.setEnabled(false);
+        jestado.setEnabled(false);
+        jButtonpesquisar.setEnabled(isIcon);
+         jnome.requestFocus();//seta o campo nome
+    }//GEN-LAST:event_jButtonlimparActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
        if (jCheckBox1.isSelected()){
@@ -472,7 +479,7 @@ public class JFCADCondominio extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonalterar;
+    private javax.swing.JButton jButtonlimpar;
     private javax.swing.JButton jButtonpesquisar;
     private javax.swing.JButton jButtonsalvar;
     private javax.swing.JCheckBox jCheckBox1;
