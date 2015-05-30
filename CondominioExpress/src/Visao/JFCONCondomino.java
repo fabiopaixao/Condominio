@@ -144,6 +144,7 @@ public class JFCONCondomino extends javax.swing.JInternalFrame {
  JFMenu.jDesktop.add(JFCADCondo);
 JFCADCondo .setVisible(true);
 JFCADCondo .setPosicao(); 
+JFCONCondomino.this.dispose();
     }//GEN-LAST:event_jButtonaddActionPerformed
 
     private void jButtonalterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonalterarActionPerformed
@@ -151,6 +152,7 @@ JFCADCondo .setPosicao();
  JFMenu.jDesktop.add(JFEDITCondo);
 JFEDITCondo .setVisible(true);
 JFEDITCondo .setPosicao(); 
+JFCONCondomino.this.dispose();
     }//GEN-LAST:event_jButtonalterarActionPerformed
 
     private void jButtondeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtondeletarActionPerformed

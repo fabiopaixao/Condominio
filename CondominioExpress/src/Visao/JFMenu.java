@@ -71,8 +71,10 @@ ie.printStackTrace();
         jMenuItemVeiculos = new javax.swing.JMenuItem();
         jMenuItemPrestadorServicos = new javax.swing.JMenuItem();
         jMenuItemVisitantes = new javax.swing.JMenuItem();
+        jMenuItemOcorrencia = new javax.swing.JMenuItem();
         jMenuItemFuncionarios = new javax.swing.JMenuItem();
         jMenuItemUsuarios = new javax.swing.JMenuItem();
+        jMenuItemCondominio = new javax.swing.JMenuItem();
         jMenuAjuda = new javax.swing.JMenu();
         jMenuItemSobre = new javax.swing.JMenuItem();
         jMenuSair = new javax.swing.JMenu();
@@ -169,6 +171,11 @@ ie.printStackTrace();
         jMenuItemBloco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones menu/bloco.png"))); // NOI18N
         jMenuItemBloco.setText("Bloco");
         jMenuItemBloco.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItemBloco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemBlocoActionPerformed(evt);
+            }
+        });
         jMenuCadastro.add(jMenuItemBloco);
 
         jMenuItemVeiculos.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -204,6 +211,12 @@ ie.printStackTrace();
         });
         jMenuCadastro.add(jMenuItemVisitantes);
 
+        jMenuItemOcorrencia.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jMenuItemOcorrencia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones menu/ocorrencias.png"))); // NOI18N
+        jMenuItemOcorrencia.setText("Ocorrência");
+        jMenuItemOcorrencia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuCadastro.add(jMenuItemOcorrencia);
+
         jMenuItemFuncionarios.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jMenuItemFuncionarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones menu/funcionario.png"))); // NOI18N
         jMenuItemFuncionarios.setText("Funcionário");
@@ -225,6 +238,12 @@ ie.printStackTrace();
             }
         });
         jMenuCadastro.add(jMenuItemUsuarios);
+
+        jMenuItemCondominio.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jMenuItemCondominio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visao/imagens/icones menu/condominio.png"))); // NOI18N
+        jMenuItemCondominio.setText("Condomínio");
+        jMenuItemCondominio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuCadastro.add(jMenuItemCondominio);
 
         jMenuBar1.add(jMenuCadastro);
 
@@ -300,7 +319,12 @@ ie.printStackTrace();
     }//GEN-LAST:event_formWindowOpened
 
     private void jMenuCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCadastroActionPerformed
-
+   JFCONBloco CONBloco = new JFCONBloco ();
+       jDesktop.add(CONBloco);
+     CONBloco.setVisible(true);
+      CONBloco.setPosicao(); 
+        
+        
     }//GEN-LAST:event_jMenuCadastroActionPerformed
 
     private void jMenuItemCondominoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCondominoActionPerformed
@@ -311,17 +335,17 @@ ie.printStackTrace();
     }//GEN-LAST:event_jMenuItemCondominoActionPerformed
 
     private void jMenuItemApartamentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemApartamentosActionPerformed
-   JFCADApartamento JFCApart = new   JFCADApartamento();
-        jDesktop.add(JFCApart);
-         JFCApart.setVisible(true);
-         JFCApart.setPosicao(); 
+   JFCONApartamentos JFCONApart = new JFCONApartamentos ();
+        jDesktop.add(JFCONApart);
+         JFCONApart.setVisible(true);
+         JFCONApart.setPosicao(); 
     }//GEN-LAST:event_jMenuItemApartamentosActionPerformed
 
     private void jMenuItemVeiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemVeiculosActionPerformed
-        JFCADVeiculos JFCVeiculo = new   JFCADVeiculos();
-        jDesktop.add(JFCVeiculo);
-         JFCVeiculo.setVisible(true);
-         JFCVeiculo.setPosicao();
+        JFCONVeiculo Veiculos  = new JFCONVeiculo();
+        jDesktop.add(Veiculos);
+       Veiculos.setVisible(true);
+         Veiculos.setPosicao();
     }//GEN-LAST:event_jMenuItemVeiculosActionPerformed
 
     private void jMenuItemPrestadorServicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPrestadorServicosActionPerformed
@@ -358,6 +382,13 @@ ie.printStackTrace();
     cadusuarios.setVisible(true);
     cadusuarios.setPosicao();
     }//GEN-LAST:event_jMenuItemUsuariosActionPerformed
+
+    private void jMenuItemBlocoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemBlocoActionPerformed
+ JFCONBloco Bloco = new  JFCONBloco();
+ JFMenu.jDesktop.add(Bloco);
+Bloco.setVisible(true);
+Bloco.setPosicao(); 
+    }//GEN-LAST:event_jMenuItemBlocoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -420,8 +451,10 @@ jHora.setText("Hora: "+hora+":"+minuto+":"+segundo);
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItemApartamentos;
     private javax.swing.JMenuItem jMenuItemBloco;
+    private javax.swing.JMenuItem jMenuItemCondominio;
     private javax.swing.JMenuItem jMenuItemCondomino;
     private javax.swing.JMenuItem jMenuItemFuncionarios;
+    private javax.swing.JMenuItem jMenuItemOcorrencia;
     private javax.swing.JMenuItem jMenuItemPrestadorServicos;
     private javax.swing.JMenuItem jMenuItemSobre;
     private javax.swing.JMenuItem jMenuItemUsuarios;
