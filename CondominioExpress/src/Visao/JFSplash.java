@@ -22,6 +22,7 @@ public class JFSplash extends javax.swing.JFrame {
      */
     public JFSplash() {
         initComponents();
+        setLocationRelativeTo(null);
       
         
 // Inicio do código para Tela de Splash

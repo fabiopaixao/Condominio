@@ -349,10 +349,10 @@ ie.printStackTrace();
     }//GEN-LAST:event_jMenuItemVeiculosActionPerformed
 
     private void jMenuItemPrestadorServicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPrestadorServicosActionPerformed
-        JFCADPrestador JFCprestador = new JFCADPrestador ();
-        jDesktop.add(JFCprestador);
-        JFCprestador.setVisible(true);
-        JFCprestador.setPosicao();
+        JFCONPrestador  Prestador = new JFCONPrestador();
+        jDesktop.add(Prestador);
+        Prestador.setVisible(true);
+        Prestador.setPosicao();
     }//GEN-LAST:event_jMenuItemPrestadorServicosActionPerformed
 
     private void jMenuItemSobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSobreActionPerformed

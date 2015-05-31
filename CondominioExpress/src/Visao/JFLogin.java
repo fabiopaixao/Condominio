@@ -17,6 +17,7 @@ public class JFLogin extends javax.swing.JFrame {
      */
     public JFLogin() {
         initComponents();
+        setLocationRelativeTo(null);
         login.requestFocus(); //seta o campo login  
     }
 
@@ -103,8 +104,7 @@ public class JFLogin extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 620, 320);
 
-        setSize(new java.awt.Dimension(618, 320));
-        setLocationRelativeTo(null);
+        setBounds(0, 0, 618, 320);
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
